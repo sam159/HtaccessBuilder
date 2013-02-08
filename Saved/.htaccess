@@ -1,0 +1,4 @@
+Order deny,allow
+Deny From All
+Allow From home.xnet.tk
+Options +Indexes
