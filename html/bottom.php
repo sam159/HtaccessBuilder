@@ -9,16 +9,11 @@
     </div><!-- / page -->
   </div><!-- / wrapper -->
   <?php include('footer.php'); ?>
-  
   <div style="clear: both;">&nbsp;</div>
-    <script type="text/javascript">
-      var uvOptions = {};
-      (function() {
-        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/3Kr8ahaGdYLcNwpTEtA7fQ.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-      })();
-    </script>
+  <?php
+  if (is_file(dirname(__FILE__).'/bottom-custom.php'))
+    include(dirname(__FILE__).'/bottom-custom.php');
+  ?>
   </body>
 </html>
 <!--

@@ -28,22 +28,14 @@
       }
     </style>
     <?php endif; ?>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-32779476-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
+    <?php
+    if (is_file(dirname(__FILE__).'/head-custom.php'))
+      include(dirname(__FILE__).'/head-custom.php');
+    ?>
     <?php if (isset($head)) echo $head; ?>
   </head>
   <body id="<?php if (isset($pageid)) echo $pageid; ?>">
+    <a href="https://github.com/sam159/HtaccessBuilder"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <div id="wrapper">
       <div id="header-wrapper">
         <div id="header">
@@ -62,17 +54,6 @@
           </ul>
         </div>
       </div>
-      <!--<div id="donate">
-        Find this useful? <br/>
-        <div>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <input type="hidden" name="cmd" value="_s-xclick"/>
-            <input type="hidden" name="hosted_button_id" value="N7V2ZSKNXCGW8"/>
-            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" class="image" border="0" name="submit" alt="&pound;1" title="&pound;1"/>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1"/>
-          </form>
-        </div>
-      </div>-->
     <?php $class = ''; if (!isset($sidebar) || $sidebar == False) $class = 'class="fullwidth"'?>
     <div id="page" <?=$class?>>
       <div id="page-bgtop" <?=$class?>>
