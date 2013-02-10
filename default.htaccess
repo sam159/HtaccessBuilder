@@ -1,0 +1,7 @@
+Options -Indexes
+<IfModule mod_rewrite.c>
+# Enable Rewrite Engine
+RewriteEngine On
+#RewriteBase /
+RewriteRule ^rules/([\w]+)/?$ recall.php?id=$1
+</IfModule>
