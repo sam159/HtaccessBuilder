@@ -59,6 +59,8 @@ EOT;
     $toUrl = $to;
     $to = parse_url($to);
     
+    $toUrl = str_replace(' ', '%20', $toUrl);
+    
     if (!$from || !$to)
       return False;
     $default = array('scheme'=>false,'host'=>false,'port'=>false,'path'=>false,'query'=>false,'fragment'=>false);
