@@ -20,7 +20,9 @@ class System
     header('Cache-Control: no-cache, no-store, must-revalidate');
     header('Pragma: no-cache');
 
-    session_set_cookie_params(60*60*24, self::$config->BasePath, $_SERVER['HTTP_HOST'], False, True);
+    $path = parse_url(self::$config->BasePath, PHP_URL_PATH);
+
+    session_set_cookie_params(60*60*24, $path, $_SERVER['HTTP_HOST'], False, True);
     session_start();
   }
 }

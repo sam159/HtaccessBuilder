@@ -78,7 +78,7 @@ class HtRule_List
     $this->id = uniqid();
     
     $ds = DIRECTORY_SEPARATOR;
-    $dir = BASE_PATH.$ds.'Saved'.$ds;
+    $dir = SAVED_PATH.$ds;
     $dir .= substr($this->id, 0,2).$ds;
     $dir .= substr($this->id, 2,2).$ds;
     
