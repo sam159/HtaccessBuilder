@@ -4,6 +4,7 @@ COPY . /srv/app
 
 RUN chown -R www-data:www-data /srv/app
 
+RUN a2enmod rewrite
 ENV APACHE_DOCUMENT_ROOT /srv/app/src
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
