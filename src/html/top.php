@@ -7,7 +7,7 @@
     <title>Htaccess Builder</title>
     <base href="<?php echo System::Config()->BasePath; ?>"/>
     <link href="Media/style.css" rel="stylesheet" type="text/css"/>
-    <link href='http://fonts.googleapis.com/css?family=Oswald|Arvo|Telex' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oswald|Arvo|Telex' rel='stylesheet' type='text/css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     if(typeof jQuery == 'undefined'){document.write("<scr"+"ipt src=\"Media/jquery.min.js\" type=\"text/javascript\"><\/scr"+"ipt>");}
