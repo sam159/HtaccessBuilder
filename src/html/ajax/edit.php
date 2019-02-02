@@ -4,6 +4,9 @@ $rules = new HtRule_List();
 
 $rule = $rules->GetAtIndex($params['id']);
 
+if (!$rule)
+  return;
+
 /* @var $rule HtRule */
 
 $params = $rule->GetParams();

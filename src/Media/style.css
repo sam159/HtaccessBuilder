@@ -593,7 +593,7 @@ Creator
   height: 100%;
   width: 100%;
   overflow: auto;
-  white-space: nowrap;
+  white-space: pre-wrap;
 }
 #listing-code-close {
   float: right;
